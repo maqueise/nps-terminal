@@ -5,22 +5,33 @@ import {
   Route,
 } from "react-router-dom"
 import NPS from "./components/NPS"
-import Teste from "./components/teste"
+import Header from './layout/Header'
+import Main from './layout/Main'
+import { NPSProvider } from './providers/NPSProvider'
+import FinishMessage from './components/FinishMessage'
+
+
 
 function App() {
   return (
     <>
     <GlobalStyles/>
-    <Router>
+    <Header/>
+    <Main>
+      <Router>
             <Switch>
                 <Route exact path="/">
+                 <NPSProvider>
                   <NPS/>
+                 </NPSProvider>
+
                 </Route>
-                <Route path="/teste">
-                    <Teste/>
+                <Route path="/finish">
+                  <FinishMessage/>
                 </Route>
             </Switch>
       </Router>
+      </Main>
       </>
     );
 }
