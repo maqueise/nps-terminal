@@ -9,6 +9,7 @@ import Header from './layout/Header'
 import Main from './layout/Main'
 import { NPSProvider } from './providers/NPSProvider'
 import FinishMessage from './components/FinishMessage'
+import Question from './components/Question'
 
 
 
@@ -28,6 +29,9 @@ function App() {
                 </Route>
                 <Route path="/finish">
                   <FinishMessage/>
+                </Route>
+                <Route path="/question">
+                  <Question/>
                 </Route>
             </Switch>
       </Router>
