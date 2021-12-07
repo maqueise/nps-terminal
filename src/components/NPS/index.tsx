@@ -9,10 +9,9 @@ function NPS(){
 const {disableConfirm,scale} = useNpsContext()
 const history = useHistory()
   const handleConfirmClick = async ()=>{
-  const response = await registerNps(scale)
-  if(response.status===201){
-    history.push('/finish')
-  }
+  //const response = await registerNps(scale)
+    history.push('/question')
+
 }
     return(
         <Container>
